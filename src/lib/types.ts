@@ -1,0 +1,1 @@
+export type UnaryFunction<T, U> = (x: T) => U;

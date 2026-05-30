@@ -1,0 +1,37 @@
+{
+  "name": "functional",
+  "version": "1.0.0",
+  "description": "A study on functional programming",
+  "homepage": "https://github.com/ducthang-vu/functional#readme",
+  "bugs": {
+    "url": "https://github.com/ducthang-vu/functional/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ducthang-vu/functional.git"
+  },
+  "license": "ISC",
+  "author": "Duc Thang Vu",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts --clean",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "devDependencies": {
+    "tsup": "^8.5.1",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.7"
+  }
+}
